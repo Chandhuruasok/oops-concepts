@@ -3,22 +3,23 @@ package com.oops.encap;
 public class CollegeManagementApp {
 	String collegeName;
 	int staff,student,department,bus;
-	long fees;
+	long collegeCode,branchCode;
 	boolean hostel;
 	public CollegeManagementApp()
 	{
 		
 	}
-	public CollegeManagementApp(String collegeName, int staff, int student, int department, int bus, long fees,
-			boolean hostel) {
+	public CollegeManagementApp(String collegeName, int staff, int student, int department, int bus, long collegeCode,
+			boolean hostel,long branchCode) {
 		super();
 		this.collegeName = collegeName;
 		this.staff = staff;
 		this.student = student;
 		this.department = department;
 		this.bus = bus;
-		this.fees = fees;
+		this. collegeCode=collegeCode;
 		this.hostel = hostel;
+		this.branchCode=branchCode;
 		
 	}
 	public String getCollegeName() {
@@ -51,11 +52,17 @@ public class CollegeManagementApp {
 	public void setBus(int bus) {
 		this.bus = bus;
 	}
-	public long getFees() {
-		return fees;
+	public long getCollegeCode() {
+		return collegeCode;
 	}
-	public void setFees(long fees) {
-		this.fees = fees;
+	public void setCollegeCode(long collegeCode) {
+		this.collegeCode = collegeCode;
+	}
+	public long getBranchCode() {
+		return branchCode;
+	}
+	public void setBranchCode(long branchCode) {
+		this.branchCode = branchCode;
 	}
 	public boolean isHostel() {
 		return hostel;
@@ -66,8 +73,10 @@ public class CollegeManagementApp {
 	@Override
 	public String toString() {
 		return "CollegeManagementApp [collegeName=" + collegeName + ", staff=" + staff + ", student=" + student
-				+ ", department=" + department + ", bus=" + bus + ", fees=" + fees + ", hostel=" + hostel + "]";
+				+ ", department=" + department + ", bus=" + bus + ", collegeCode=" + collegeCode + ", branchCode="
+				+ branchCode + ", hostel=" + hostel + "]";
 	}
+	
 	
 	
 }
