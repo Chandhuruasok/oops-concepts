@@ -49,6 +49,22 @@ public class TestStudent  {
 		s1.displayTask();
 		s1.write();
 		s1.read();
+		System.out.println("Enter the student mark out of 500:");
+		int mark=s.nextInt();
+		if(mark<0)
+		{
+			System.out.println("Enter the student mark out of 500:");
+			mark=s.nextInt();
+		}
+		s1.addTask(mark);
+		System.out.println("Enter the student grade:");
+		String grade=s.next();
+		while(!grade.matches(nameCheck))
+		{
+			System.out.println("Enter the student grade:");
+		    grade=s.next();
+		}
+		s1.grade(grade);
 	}
 
 }

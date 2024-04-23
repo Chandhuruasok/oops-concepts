@@ -8,7 +8,7 @@ public void detailStudent(String name,int id)
 }
 public void detailStudent(String location,String degree)
 {
-	//System.out.println("Location of the student is: "+location+" degree :"+degree);
+	System.out.println("Location of the student is: "+location+" degree :"+degree);
 }
 
 
