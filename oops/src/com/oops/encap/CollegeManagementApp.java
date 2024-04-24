@@ -2,7 +2,7 @@ package com.oops.encap;
 
 public class CollegeManagementApp {
 	String collegeName;
-	int staff,student,department,bus;
+	int staff,student,department,bus,cutOff;
 	long collegeCode,branchCode;
 	boolean hostel;
 	public CollegeManagementApp()
@@ -10,7 +10,7 @@ public class CollegeManagementApp {
 		
 	}
 	public CollegeManagementApp(String collegeName, int staff, int student, int department, int bus, long collegeCode,
-			boolean hostel,long branchCode) {
+			boolean hostel,long branchCode,int cutOff) {
 		super();
 		this.collegeName = collegeName;
 		this.staff = staff;
@@ -20,6 +20,7 @@ public class CollegeManagementApp {
 		this. collegeCode=collegeCode;
 		this.hostel = hostel;
 		this.branchCode=branchCode;
+		this.cutOff=cutOff;
 		
 	}
 	public String getCollegeName() {
@@ -70,13 +71,24 @@ public class CollegeManagementApp {
 	public void setHostel(boolean hostel) {
 		this.hostel = hostel;
 	}
+	
+	public int getCutOff()
+	{
+		return cutOff;
+	}
+	public void setCutOff(int cutOff)
+	{
+		this.cutOff=cutOff;
+	}
 	@Override
 	public String toString() {
 		return "CollegeManagementApp [collegeName=" + collegeName + ", staff=" + staff + ", student=" + student
-				+ ", department=" + department + ", bus=" + bus + ", collegeCode=" + collegeCode + ", branchCode="
-				+ branchCode + ", hostel=" + hostel + "]";
+				+ ", department=" + department + ", bus=" + bus + ", cutOff=" + cutOff + ", collegeCode=" + collegeCode
+				+ ", branchCode=" + branchCode + ", hostel=" + hostel + "]";
+	}
+	
 	}
 	
 	
 	
-}
+

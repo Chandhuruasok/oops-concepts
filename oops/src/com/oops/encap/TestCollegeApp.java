@@ -13,6 +13,11 @@ public class TestCollegeApp {
 		System.out.println("---4.KCT---");
 		System.out.println("Choose the college  from the above option:");
 		int option=scan.nextInt();
+		if(option<0)
+		{
+			System.out.println("Choose the college  from the above option:");
+			option=scan.nextInt();
+		}
 		int select;
 		switch(option)
 		{
@@ -22,6 +27,11 @@ public class TestCollegeApp {
 			System.out.println("1.Government quota \n 2.Management quota");
 			System.out.println("Enter the type of quota:");
 			select=scan.nextInt();
+			if(select<0)
+			{
+				System.out.println("Enter the type of quota:");
+				select=scan.nextInt();
+			}
 			switch(select)
 			{
 			case 1:
@@ -46,6 +56,11 @@ public class TestCollegeApp {
 			System.out.println("1.Government quota \n 2.Management quota");
 			System.out.println("Enter the type of quota:");
 			select=scan.nextInt();
+			if(select<0)
+			{
+				System.out.println("Enter the type of quota:");
+				select=scan.nextInt();
+			}
 			switch(select)
 			{
 			case 1:
@@ -70,6 +85,11 @@ public class TestCollegeApp {
 			System.out.println("1.Government quota \n 2.Management quota");
 			System.out.println("Enter the type of quota:");
 			select=scan.nextInt();
+			if(select<0)
+			{
+				System.out.println("Enter the type of quota:");
+				select=scan.nextInt();
+			}
 			switch(select)
 			{
 			case 1:
@@ -94,6 +114,11 @@ public class TestCollegeApp {
 			System.out.println("1.Government quota\n 2.Management quota");
 			System.out.println("Enter the type of quota:");
 			select=scan.nextInt();
+			if(select<0)
+			{
+				System.out.println("Enter the type of quota:");
+				select=scan.nextInt();
+			}
 			switch(select)
 			{
 			case 1:
@@ -120,8 +145,17 @@ public class TestCollegeApp {
 			System.out.println("Enter the college code:");
 			cp.collegeCode=scan.nextLong();
 		}
+		System.out.println("Enter your cutoff:");
+		cp.cutOff=scan.nextInt();
+		if(cp.cutOff<0)
+		{
+			System.out.println("Enter your cutoff:");
+			cp.cutOff=scan.nextInt();
+		}
 		cp.setCollegeCode(cp.collegeCode);
+		cp.setCutOff(cp.cutOff);
 		ca.collegeDetails(cp.getCollegeCode());
+		ca.collegeDetails(cp.getCollegeCode(),cp.getCutOff());
 		/*cp.collegeName=scan.next();
 		String collegeNameCheck="^[a-zA-z]+$";
 		while(!cp.collegeName.matches(collegeNameCheck))
@@ -224,5 +258,6 @@ public class TestCollegeApp {
 			System.out.println("Fees structure for MCA is 2,600,00");
 			break;
 		}*/
+		scan.close();
 }
 }
