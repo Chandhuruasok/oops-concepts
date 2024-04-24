@@ -52,6 +52,10 @@ public class CollegeApp {
 			System.out.println("Hostel facility is available");
 			System.out.println("Bus facility is also available for dayscholars");
 		}	
+		else
+		{
+			System.out.println("Wrong college code");
+		}
 		}
 	public void collegeDetails(long collegeCode,int cutOff)
 	{
@@ -78,7 +82,8 @@ public class CollegeApp {
 				System.out.println("1.VTS\n 2.KCS\n 3.KLENSYS\n 4.CLOUDFORCE TECHNOLOGIES");
 			}
 			else 
-			{
+			{	System.out.println("On-Campus companies visited for CSE department at our college:");
+				System.out.println("1.VTS\n 2.MAPGEMINI\n 3.K&T\\n 4.GOODWELL");
 				System.out.println("No courses available for this cut-off");
 			}
 		}
@@ -89,8 +94,6 @@ public class CollegeApp {
 				System.out.println("Available courses  for your cut-off are IT and CSE");
 				System.out.println("On-Campus companies visited for IT department at our college:");
 				System.out.println("1.VISCO\n 2.MOCH TECHNOLOGIES\n 3.TALO ALTO\n 4.TAKEN TECHNOLOGIES");
-				System.out.println("On-Campus companies visited for CSE department at our college:");
-				System.out.println("1.VTS\n 2.MAPGEMINI\n 3.K&T\n 4.GOODWELL");
 			}
 			else if(cutOff>=140 && cutOff<150)
 			{
