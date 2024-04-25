@@ -8,8 +8,8 @@ public class TestCollegeApp {
 		CollegeManagementApp cp=new CollegeManagementApp();
 		CollegeApp ca=new CollegeApp();
 		System.out.println("select 1.admin/ 2.user");
-		int selectOption=scan.nextInt();
-		switch(selectOption)
+		cp.selectOption=scan.nextInt();
+		switch(cp.selectOption)
 		{
 			case 1:
 			CollegeAdmin.psnaAdmin();

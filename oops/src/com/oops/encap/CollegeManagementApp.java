@@ -1,94 +1,98 @@
 package com.oops.encap;
 
 public class CollegeManagementApp {
-	String collegeName;
-	int staff,student,department,bus,cutOff;
-	long collegeCode,branchCode;
-	boolean hostel;
+	String adminName,adminPassword;
+	String userName1,userPassword1,userName2,userPassword2;
+	int selectOption;
+	long collegeCode;
+	
 	public CollegeManagementApp()
 	{
 		
 	}
-	public CollegeManagementApp(String collegeName, int staff, int student, int department, int bus, long collegeCode,
-			boolean hostel,long branchCode,int cutOff) {
+
+	public CollegeManagementApp(String adminName, String adminPassword, String userName1, String userPassword1,
+			String userName2, String userPassword2, int selectOption, long collegeCode) {
 		super();
-		this.collegeName = collegeName;
-		this.staff = staff;
-		this.student = student;
-		this.department = department;
-		this.bus = bus;
-		this. collegeCode=collegeCode;
-		this.hostel = hostel;
-		this.branchCode=branchCode;
-		this.cutOff=cutOff;
-		
+		this.adminName = adminName;
+		this.adminPassword = adminPassword;
+		this.userName1 = userName1;
+		this.userPassword1 = userPassword1;
+		this.userName2 = userName2;
+		this.userPassword2 = userPassword2;
+		this.selectOption = selectOption;
+		this.collegeCode = collegeCode;
 	}
-	public String getCollegeName() {
-		return collegeName;
+
+	public String getAdminName() {
+		return adminName;
 	}
-	public void setCollegeName(String collegeName) {
-		this.collegeName = collegeName;
+
+	public void setAdminName(String adminName) {
+		this.adminName = adminName;
 	}
-	public int getStaff() {
-		return staff;
+
+	public String getAdminPassword() {
+		return adminPassword;
 	}
-	public void setStaff(int staff) {
-		this.staff = staff;
+
+	public void setAdminPassword(String adminPassword) {
+		this.adminPassword = adminPassword;
 	}
-	public int getStudent() {
-		return student;
+
+	public String getUserName1() {
+		return userName1;
 	}
-	public void setStudent(int student) {
-		this.student = student;
+
+	public void setUserName1(String userName1) {
+		this.userName1 = userName1;
 	}
-	public int getDepartment() {
-		return department;
+
+	public String getUserPassword1() {
+		return userPassword1;
 	}
-	public void setDepartment(int department) {
-		this.department = department;
+
+	public void setUserPassword1(String userPassword1) {
+		this.userPassword1 = userPassword1;
 	}
-	public int getBus() {
-		return bus;
+
+	public String getUserName2() {
+		return userName2;
 	}
-	public void setBus(int bus) {
-		this.bus = bus;
+
+	public void setUserName2(String userName2) {
+		this.userName2 = userName2;
 	}
+
+	public String getUserPassword2() {
+		return userPassword2;
+	}
+
+	public void setUserPassword2(String userPassword2) {
+		this.userPassword2 = userPassword2;
+	}
+
+	public int getSelectOption() {
+		return selectOption;
+	}
+
+	public void setSelectOption(int selectOption) {
+		this.selectOption = selectOption;
+	}
+
 	public long getCollegeCode() {
 		return collegeCode;
 	}
+
 	public void setCollegeCode(long collegeCode) {
 		this.collegeCode = collegeCode;
 	}
-	public long getBranchCode() {
-		return branchCode;
-	}
-	public void setBranchCode(long branchCode) {
-		this.branchCode = branchCode;
-	}
-	public boolean isHostel() {
-		return hostel;
-	}
-	public void setHostel(boolean hostel) {
-		this.hostel = hostel;
-	}
-	
-	public int getCutOff()
-	{
-		return cutOff;
-	}
-	public void setCutOff(int cutOff)
-	{
-		this.cutOff=cutOff;
-	}
+
 	@Override
 	public String toString() {
-		return "CollegeManagementApp [collegeName=" + collegeName + ", staff=" + staff + ", student=" + student
-				+ ", department=" + department + ", bus=" + bus + ", cutOff=" + cutOff + ", collegeCode=" + collegeCode
-				+ ", branchCode=" + branchCode + ", hostel=" + hostel + "]";
+		return "CollegeManagementApp [adminName=" + adminName + ", adminPassword=" + adminPassword + ", userName1="
+				+ userName1 + ", userPassword1=" + userPassword1 + ", userName2=" + userName2 + ", userPassword2="
+				+ userPassword2 + ", selectOption=" + selectOption + ", collegeCode=" + collegeCode + "]";
 	}
 	
-	}
-	
-	
-	
-
+}

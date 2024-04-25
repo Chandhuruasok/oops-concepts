@@ -1,25 +1,27 @@
 package com.oops.encap;
 import java.util.*;
 public class CollegeAdmin {
+	
 	public static void psnaAdmin()
 	{
+		CollegeManagementApp cm=new CollegeManagementApp();
 		Scanner s=new Scanner(System.in);
 		String adminNamePsna="Psna";
 		String adminPasswordPsna="Psna@1";
 		System.out.println("Enter the admin name:");
-		String adminName=s.next();
+		cm.adminName=s.next();
 		System.out.println("Enter the admin password:");
-		String adminPassword=s.next();
-		while(!(adminName.matches(adminNamePsna)))
+		cm.adminPassword=s.next();
+		while(!(cm.adminName.matches(adminNamePsna)))
 		{
 			System.out.println("Enter the correct admin name:");
-		    adminName=s.next();
+		    cm.adminName=s.next();
 			
 		}
-		while(!adminPassword.matches(adminPasswordPsna))
+		while(!cm.adminPassword.matches(adminPasswordPsna))
 		{
 			System.out.println("Enter the correct admin password:");
-		    adminPassword=s.next();
+		    cm.adminPassword=s.next();
 		}
 		System.out.println("---Welcome Admin---");
 		System.out.println("whether you need to add extra features(1.yes/2.no):");
@@ -67,29 +69,28 @@ public class CollegeAdmin {
 	}
 	public static void psnaUser()
 	{
-	
+		CollegeManagementApp cm=new CollegeManagementApp();
 	    Scanner scan=new Scanner(System.in);
 	    String userNamePsna="^[a-zA-Z]+$";
 		String userPasswordPsna="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8}$";
 	    System.out.println("Whether you are 1.new user 2.existing user ");
 	    int option=scan.nextInt();
-	    
 	    if(option==1)
 	    {
 	    	System.out.println("---SIGN UP PAGE---");
 	    	System.out.println("create userName:");
-	    	String userName1=scan.next();
-	    	while(!(userName1.matches(userNamePsna)))
+	    	cm.userName1=scan.next();
+	    	while(!(cm.userName1.matches(userNamePsna)))
 	    	{
 	    		System.out.println("create userName:");
-		    	 userName1=scan.next();
+		    	 cm.userName1=scan.next();
 	    	}
 	    	System.out.println("create userPassword:");
-	    	String userPassword1=scan.next();
-	    	while(!(userPassword1.matches(userPasswordPsna)))
+	    	cm.userPassword1=scan.next();
+	    	while(!(cm.userPassword1.matches(userPasswordPsna)))
 	    	{
 	    		System.out.println("create userPassword:");
-		    	 userPassword1=scan.next();
+		    	 cm.userPassword1=scan.next();
 	    	}
 	    	System.out.println("---SIGN UP SUCCESSFUL---");
 	    }
@@ -97,19 +98,19 @@ public class CollegeAdmin {
 	    {
 	    	System.out.println("---LOGIN PAGE---");
 	    	System.out.println("Enter the user name:");
-	    	String userName2=scan.next();
+	        cm.userName2=scan.next();
 	
-	    	while(!(userName2.matches(userNamePsna)))
+	    	while(!(cm.userName2.matches(userNamePsna)))
 	    	{
 	    		System.out.println("Enter the user name:");
-		    	 userName2=scan.next();
+		    	 cm.userName2=scan.next();
 	    	}
 	    	System.out.println("Enter the user password:");
-	    	 String userPassword2=scan.next();
-	    	 while(!(userPassword2.matches(userPasswordPsna)))
+	    	 cm.userPassword2=scan.next();
+	    	 while(!(cm.userPassword2.matches(userPasswordPsna)))
 		    	{
 		    		System.out.println("Enter the user name:");
-			    	 userName2=scan.next();
+			    	 cm.userName2=scan.next();
 		    	}
 	    	 System.out.println("---LOGIN SUCCESSFUL---");
 	    		
@@ -141,3 +142,4 @@ public class CollegeAdmin {
 		
 }
 }
+
