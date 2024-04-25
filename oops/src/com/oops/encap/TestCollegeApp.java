@@ -7,8 +7,16 @@ public class TestCollegeApp {
 		Scanner scan=new Scanner(System.in);
 		CollegeManagementApp cp=new CollegeManagementApp();
 		CollegeApp ca=new CollegeApp();
-		System.out.println("select 1.admin/ 2.user");
+		System.out.println("---COLLEGE MANAGEMENT APP---");
+		System.out.println("select \n 1.admin\n 2.user");
 		cp.selectOption=scan.nextInt();
+		if(cp.selectOption<0)
+		{
+			System.out.println("select \n 1.admin\n 2.user");
+			cp.selectOption=scan.nextInt();
+		}
+		
+		
 		switch(cp.selectOption)
 		{
 			case 1:
@@ -17,6 +25,8 @@ public class TestCollegeApp {
 			case 2:
 				CollegeAdmin.psnaUser();
 				break;
+			default:
+				System.out.println("Invalid option");
 				
 		}
 		System.out.println("Enter the college code:");
@@ -28,6 +38,7 @@ public class TestCollegeApp {
 		}
 		cp.setCollegeCode(cp.collegeCode);
 		ca.collegeDetails(cp.getCollegeCode());
+		cp.setSelectOption(cp.selectOption);
 		scan.close();
 }
 }

@@ -18,6 +18,8 @@ public class CollegeApp {
 			System.out.println("Wrong college code");
 		}
 		}
+	
+	
 }
 	
 		

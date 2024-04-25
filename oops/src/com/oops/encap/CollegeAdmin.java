@@ -24,14 +24,25 @@ public class CollegeAdmin {
 		    cm.adminPassword=s.next();
 		}
 		System.out.println("---Welcome Admin---");
+		System.out.println("---LOGIN SUCCESSFUL---");
 		System.out.println("whether you need to add extra features(1.yes/2.no):");
 		int option=s.nextInt();
+		if(option<0)
+		{
+			System.out.println("whether you need to add extra features(1.yes/2.no):");
+			option=s.nextInt();
+		}
 		switch(option)
 		{
 		   case 1:
 			   System.out.println("---Features can be added---");
-			   System.out.println("select option to add features(1.Placement 2.Ranking)");
+			   System.out.println("select option to add features(1.Placement 2.Ranking 3.companies)");
 			   int o=s.nextInt();
+			   if(o<0)
+			   {
+				   System.out.println("select option to add features(1.Placement 2.Ranking 3.companies)");
+				    o=s.nextInt();
+			   }
 			   switch(o)
 			   {
 			   case 1:
@@ -58,7 +69,19 @@ public class CollegeAdmin {
 				   System.out.println("current ranking of our college is:"+rank);
 				   System.out.println("---Thank you features are updated---");
 				   break;
+			   case 3:
+				   System.out.println("please enter the total number of companies visited at our college:");
+				   int company=s.nextInt();
+				   if(company<0)
+				   {
+					   System.out.println("please enter the total number of companies visited at our college:");
+					   company=s.nextInt();
+				   }
+				   System.out.println("Total number of companies visited at our college for current year:"+company);
+				   System.out.println("---Thank you features are updated---");
+				   break;
 			   }
+			   
 			   break;
 		   case 2:
 			   System.out.println("---Thank you No features are added---");
@@ -72,9 +95,14 @@ public class CollegeAdmin {
 		CollegeManagementApp cm=new CollegeManagementApp();
 	    Scanner scan=new Scanner(System.in);
 	    String userNamePsna="^[a-zA-Z]+$";
-		String userPasswordPsna="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8}$";
+		String userPasswordPsna="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{11}$";
 	    System.out.println("Whether you are 1.new user 2.existing user ");
 	    int option=scan.nextInt();
+	    if(option<0)
+	    {
+	    	System.out.println("Whether you are 1.new user 2.existing user ");
+		    option=scan.nextInt();
+	    }
 	    if(option==1)
 	    {
 	    	System.out.println("---SIGN UP PAGE---");
@@ -139,6 +167,7 @@ public class CollegeAdmin {
 		{
 			System.out.println("pay Rs.100 to attend the exam");
 		}
+		
 		
 }
 }
