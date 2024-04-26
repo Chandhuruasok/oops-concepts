@@ -149,9 +149,10 @@ public class CollegeAdmin {
 		int rollNo=scan.nextInt();
 		if(rollNo<0)
 		{
-			System.out.println("Enter your attendance percentage:");
+			System.out.println("Enter your roll number:");
 			rollNo=scan.nextInt();
 		}
+		
 		System.out.println("Enter your attendance percentage:");
 		int percent=scan.nextInt();
 		if(percent<0)
@@ -167,7 +168,21 @@ public class CollegeAdmin {
 		{
 			System.out.println("pay Rs.100 to attend the exam");
 		}
-		
+		System.out.println("Enter your name:");
+		String name=scan.next();
+		while(!name.matches(userNamePsna))
+		{
+			System.out.println("Enter your name:");
+			 name=scan.next();
+		}
+		System.out.println("Enter the college fees you have paid already:");
+		long paidFees=scan.nextLong();
+		if(paidFees<0)
+		{
+			System.out.println("Enter the college fees you have paid already:");
+			paidFees=scan.nextLong();
+		}
+		CollegeApp.CollegeDetails(name,paidFees);
 		
 }
 }

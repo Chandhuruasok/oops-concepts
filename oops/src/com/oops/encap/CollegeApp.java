@@ -1,7 +1,7 @@
 package com.oops.encap;
-
+import java.util.*;
 public class CollegeApp {
-	
+	//CollegeAdmin c=new CollegeAdmin();
 	public void collegeDetails(long collegeCode)
 	{
 		if(collegeCode==5901)
@@ -19,7 +19,15 @@ public class CollegeApp {
 		}
 		}
 	
-	
+	public static void CollegeDetails(String name,long paidFees)
+	{
+		Scanner scan=new Scanner(System.in);
+		long collegeFees=100000;
+		
+		long remFees=collegeFees-paidFees;
+		System.out.println(name+" remaining college fees to be paid by you is:"+remFees);
+		
+	}
 }
 	
 		

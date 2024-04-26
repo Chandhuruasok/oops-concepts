@@ -2,7 +2,7 @@ package com.oops.encap;
 import java.util.*;
 
 public class TestCollegeApp {
-
+    
 	public static void main(String[] args) {
 		Scanner scan=new Scanner(System.in);
 		CollegeManagementApp cp=new CollegeManagementApp();
@@ -36,6 +36,7 @@ public class TestCollegeApp {
 			System.out.println("Enter the college code:");
 			cp.collegeCode=scan.nextLong();
 		}
+		
 		cp.setCollegeCode(cp.collegeCode);
 		ca.collegeDetails(cp.getCollegeCode());
 		cp.setSelectOption(cp.selectOption);
