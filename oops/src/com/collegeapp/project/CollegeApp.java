@@ -1,7 +1,7 @@
 package com.collegeapp.project;
 import java.util.*;
 public  class CollegeApp {
-	CollegeAdmin c=new CollegeAdmin();
+	CollegeAdmin collegeAdmin=new CollegeAdmin();
 	public void collegeDetails(long collegeCode)
 	{
 		if(collegeCode==5901)

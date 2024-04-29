@@ -4,25 +4,27 @@ public class CollegeAdmin {
 	
 	public static void psnaAdmin()
 	{
-		CollegeManagementApp cm=new CollegeManagementApp();
+		CollegeManagementApp collegeManagementApp=new CollegeManagementApp();
+		AbstractExtend abstractextend=new AbstractExtend();
 		Scanner s=new Scanner(System.in);
 		String adminNamePsna="Psna";
 		String adminPasswordPsna="Psna@1";
 		System.out.println("Enter the admin name:");
-		cm.adminName=s.next();
+		collegeManagementApp.adminName=s.next();
 		System.out.println("Enter the admin password:");
-		cm.adminPassword=s.next();
-		while(!(cm.adminName.matches(adminNamePsna)))
+		collegeManagementApp.adminPassword=s.next();
+		while(!(collegeManagementApp.adminName.matches(adminNamePsna)))
 		{
 			System.out.println("Enter the correct admin name:");
-		    cm.adminName=s.next();
+			collegeManagementApp.adminName=s.next();
 			
 		}
-		while(!cm.adminPassword.matches(adminPasswordPsna))
+		while(!collegeManagementApp.adminPassword.matches(adminPasswordPsna))
 		{
 			System.out.println("Enter the correct admin password:");
-		    cm.adminPassword=s.next();
+			collegeManagementApp.adminPassword=s.next();
 		}
+		abstractextend.welcome();
 		System.out.println("---Welcome Admin---");
 		System.out.println("---LOGIN SUCCESSFUL---");
 		System.out.println("whether you need to add extra features(1.yes/2.no):");
@@ -87,16 +89,18 @@ public class CollegeAdmin {
 			   System.out.println("---Thank you No features are added---");
 			   break;
 		}
-		
+		abstractextend.thankYou();
 		
 	}
 	public static void psnaUser()
 	{
 		CollegeManagementApp cm=new CollegeManagementApp();
+		AbstractExtend abstractextend=new AbstractExtend();
 	    Scanner scan=new Scanner(System.in);
 	    String userNamePsna="^[a-zA-Z]+$";
 		String userPasswordPsna="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{11}$";
-	    System.out.println("Whether you are 1.new user 2.existing user ");
+	    abstractextend.welcome();
+		System.out.println("Whether you are 1.new user 2.existing user ");
 	    int option=scan.nextInt();
 	    if(option<0)
 	    {
@@ -143,7 +147,7 @@ public class CollegeAdmin {
 	    	 System.out.println("---LOGIN SUCCESSFUL---");
 	    		
 	    }
-		
+	    
 		System.out.println("---Welcome User---");
 		System.out.println("enter your roll number:");
 		int rollNo=scan.nextInt();
@@ -183,6 +187,7 @@ public class CollegeAdmin {
 			paidFees=scan.nextLong();
 		}
 		CollegeApp.CollegeDetails(name,paidFees);
+		abstractextend.thankYou();		
 		
 }
 }

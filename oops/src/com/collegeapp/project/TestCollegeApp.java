@@ -4,20 +4,20 @@ import java.util.*;
 public class TestCollegeApp {
     
 	public static void main(String[] args) {
-		Scanner scan=new Scanner(System.in);
-		CollegeManagementApp cp=new CollegeManagementApp();
-		CollegeApp ca=new CollegeApp();
+		Scanner scanner=new Scanner(System.in);
+		CollegeManagementApp collegeManage=new CollegeManagementApp();
+		CollegeApp collegeApp=new CollegeApp();
 		System.out.println("---COLLEGE MANAGEMENT APP---");
 		System.out.println("select \n 1.admin\n 2.user");
-		cp.selectOption=scan.nextInt();
-		if(cp.selectOption<0)
+		collegeManage.selectOption=scanner.nextInt();
+		if(collegeManage.selectOption<0)
 		{
 			System.out.println("select \n 1.admin\n 2.user");
-			cp.selectOption=scan.nextInt();
+			collegeManage.selectOption=scanner.nextInt();
 		}
 		
 		
-		switch(cp.selectOption)
+		switch(collegeManage.selectOption)
 		{
 			case 1:
 			CollegeAdmin.psnaAdmin();
@@ -30,16 +30,16 @@ public class TestCollegeApp {
 				
 		}
 		System.out.println("Enter the college code:");
-		cp.collegeCode=scan.nextLong();
-		if(cp.collegeCode<0)
+		collegeManage.collegeCode=scanner.nextLong();
+		if(collegeManage.collegeCode<0)
 		{
 			System.out.println("Enter the college code:");
-			cp.collegeCode=scan.nextLong();
+			collegeManage.collegeCode=scanner.nextLong();
 		}
 		
-		cp.setCollegeCode(cp.collegeCode);
-		ca.collegeDetails(cp.getCollegeCode());
-		cp.setSelectOption(cp.selectOption);
-		scan.close();
+		collegeManage.setCollegeCode(collegeManage.collegeCode);
+		collegeApp.collegeDetails(collegeManage.getCollegeCode());
+		collegeManage.setSelectOption(collegeManage.selectOption);
+		scanner.close();
 }
 }
