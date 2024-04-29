@@ -1,4 +1,4 @@
-package com.oops.encap;
+package com.collegeapp.project;
 import java.util.*;
 
 public class TestCollegeApp {

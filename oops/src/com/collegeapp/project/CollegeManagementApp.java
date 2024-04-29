@@ -1,4 +1,4 @@
-package com.oops.encap;
+package com.collegeapp.project;
 
 public class CollegeManagementApp {
 	String adminName,adminPassword;
