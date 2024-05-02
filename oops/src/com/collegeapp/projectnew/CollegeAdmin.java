@@ -90,6 +90,8 @@ public class CollegeAdmin {
 			   System.out.println("---Thank you No features are added---");
 			   break;
 		}
+		
+		
 		abstractextend.thankYou();
 		
 	}
@@ -188,9 +190,27 @@ public class CollegeAdmin {
 			paidFees=scan.nextInt();
 		}
 		CollegeApp.CollegeDetails(name,paidFees);
-		DataBase.insert(rollNo, percent, paidFees);
-		DataBase.update(rollNo, percent,paidFees);
-		DataBase.delete(rollNo);
+		System.out.println("select 1.insert\n 2.update\n 3.delete  to make changes in the database:");
+		int choice=scan.nextInt();
+		if(choice<0)
+		{
+			System.out.println("select 1.insert\n 2.update\n 3.delete  to make changes in the database:");
+			choice=scan.nextInt();
+		}
+		switch(choice)
+		{
+		case 1:
+			DataBase.insert(rollNo, percent, paidFees);
+			break;
+		case 2:
+			DataBase.update(rollNo, percent,paidFees);
+			break;
+		case 3:
+			DataBase.delete(rollNo);
+			break;
+			default:
+				System.out.println("wrong choice");
+		}
 		abstractextend.thankYou();		
 		
 }
